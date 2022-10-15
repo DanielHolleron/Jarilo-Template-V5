@@ -83,7 +83,14 @@ $columns: 12;
 .row {
     display: flex;
     flex-wrap: wrap;
+}
 
+.row .row {
+    margin: 0;
+}
+
+.row.inner.stacked {
+    flex-direction: column;
 }
 
 .row:not(.mob-col) {

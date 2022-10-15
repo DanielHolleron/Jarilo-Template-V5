@@ -319,6 +319,14 @@
   flex-wrap: wrap;
 }
 
+.row .row {
+  margin: 0;
+}
+
+.row.inner.stacked {
+  flex-direction: column;
+}
+
 @media (max-width: 768px) {
   .row:not(.mob-col) {
     display: block;
