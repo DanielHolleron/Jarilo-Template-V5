@@ -7,8 +7,11 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="https://jarilo.co.uk/ebaystores2022/ebayV5/stylev5.css"> -->
     <!-- <link rel="stylesheet" href="https://jarilo.co.uk/ebaystores2022/ebayV5/reset.css"> -->
-    <link rel="stylesheet" href="stylev5.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styling\reset.css">
+    <link rel="stylesheet" href="styling\main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <input id="menutoggle" type="checkbox">
@@ -19,15 +22,27 @@
             </div>
         </div>
     </div>
+    <div id="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <p>Hello!</p>
+                </div>
+                <div class="column">
+                    <p>What's going on?</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="header">
         <div class="container">
             <div class="row mob-col">
-                <div class="column sm-6 md-4 lg-3">
+                <div class="column is-narrow">
                     <div class="logo">
-                        <a href="#"><img src="/images/JARILO-logo-white.png" alt="" class="logoimg"></a>
+                        <a href="#"><img src="images\logo.png" alt="" class="logoimg"></a>
                     </div>
                 </div>
-                <div class="column sm-none md-4 lg-6">
+                <div class="column sm-none v-flex">
                     <div class="navbar">
                         <ul>
                             <a href="#"><li>About Us</li></a>
@@ -50,131 +65,100 @@
         <div class="container">
             <div class="row">
                 <div class="column">
-                    <div class="productimage column-inner">
-                        <div class="productimage_inner">
-                            <img src="/images/product.webp" alt="">
-                        </div>
+                    <div class="productimage">
+                        <div id="gallery-inner">
+                            <section class="gallery">
+                               <div class="gallery__item">
+                                  <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
+                                  <div class="bigimg"><img class="gallery__img" src="images\product.webp" alt=""/></div>
+                                  <label for="img-1" class="gallery__thumb"><img src="images\product.webp" alt=""/></label>
+                               </div>
+                               <div class="gallery__item">
+                                  <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
+                                  <div class="bigimg"><img class="gallery__img" src="images\product2.jpg" alt=""/></div>
+                                  <label for="img-2" class="gallery__thumb"><img src="images\product2.jpg" alt=""/></label>
+                               </div>
+                               <div class="gallery__item">
+                                  <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
+                                  <div class="bigimg"><img class="gallery__img" src="images\product3.jpg" alt=""/></div>
+                                  <label for="img-3" class="gallery__thumb"><img src="images\product3.jpg" alt=""/></label>
+                               </div>
+                               <div class="gallery__item">
+                                  <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
+                                  <div class="bigimg"><img class="gallery__img" src="images\product4.jpg" alt=""/></div>
+                                  <label for="img-4" class="gallery__thumb"><img src="images\product4.jpg" alt=""/></label>
+                               </div>
+                            </section>
+                         </div>
                     </div>
                 </div>
                 <div class="column">
-                    <div class="productdescription column-inner">
+                    <div class="productdescription">
                         <div class="description_inner">
-                            <h3>I'm a Product Title!</h3>
+                            <h3>DualSense Cosmic Red Wireless Controller</h3>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex soluta minima possimus sequi! Labore, illo sequi, reprehenderit sunt enim velit alias, atque natus soluta provident aperiam culpa iusto rem ab?</p>
+                            <div class="usplist">
+                                <ul>
+                                    <li>Fast and Safe Delivery</li>
+                                    <li>Fantastic Customer Service</li>
+                                    <li>Safe 30 day Returns</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="description">
+        <div class="container">
+            <div class="sectionheader">
+                <p>Product Description</p>
+            </div>
+            <div class="text-body">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quos voluptatem cum tenetur soluta quia voluptates, at placeat consequuntur deleniti sed eos enim suscipit eveniet. Harum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae aspernatur nam voluptate tempora tenetur voluptatibus, minima fuga totam ratione? Quae aliquam libero porro, tempora reiciendis officia mollitia. Ipsa, nisi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium consequuntur reprehenderit nulla praesentium officiis eius perspiciatis, dolorem distinctio, ipsam impedit natus iure. Dolores iusto eligendi ipsum doloribus earum aspernatur assumenda!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia itaque optio unde, ex quos voluptatem cum tenetur soluta quia voluptates, at placeat consequuntur deleniti sed eos enim suscipit eveniet. Harum. Mollitia itaque optio unde, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quidem laborum. Iste qui eius temporibus cumque, iure dolore corporis ipsam sed nesciunt laudantium tempora eum dolorem provident porro odio repudiandae.</p>
             </div>
         </div>
     </div>
     <div id="gridtest">
         <div class="container">
-            <div class="row">
-                <div class="column lg-8 md-6 sm-12">
-                    <div class="row inner stacked">
-                        <div class="column">
-                            <div class="row inner mob-col">
-                                <div class="column is-4">
-                                    <div class="box"></div>
-                                </div>
-                                <div class="column is-4">
-                                    <div class="box"></div>
-                                </div>
-                                <div class="column is-4">
-                                    <div class="box"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="row inner">
-                                <div class="column is-12 lg-6">
-                                    <div class="box"></div>
-                                </div>
-                                <div class="column is-12 lg-6">
-                                    <div class="box"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="box" style="height: 100%"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="columntest">
-        <div class="container">
             <div class="row mob-col">
-                <div class="column sm-6 md-4 lg-3">
-                    <div class="box">
-                        <div class="box-inner">
-                            <p>I'm a Cool Box!</p>
-                            <a href="#">
-                                <div class="button">Button</div>
-                            </a>
+                <div class="column lg-3 md-6 sm-6">
+                    <a href="#">
+                        <div class="catbox">
+                            <div class="catboxinner">
+                                <img src="images\cat_01.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="column sm-6 md-4 lg-9">
-                    <div class="box">
-                        <div class="box-inner">
-                            <p>I'm a Cool Box!</p>
-                            <a href="#">
-                                <div class="button">Button</div>
-                            </a>
+                <div class="column lg-3 md-6 sm-6">
+                    <a href="#">
+                        <div class="catbox">
+                            <div class="catboxinner">
+                                <img src="images\cat_03.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="column sm-6 md-4 lg-9">
-                    <div class="box">
-                        <div class="box-inner">
-                            <p>I'm a Cool Box!</p>
-                            <a href="#">
-                                <div class="button">Button</div>
-                            </a>
+                <div class="column lg-3 md-6 sm-6">
+                    <a href="#">
+                        <div class="catbox">
+                            <div class="catboxinner">
+                                <img src="images\cat_05.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="column sm-6 md-4 lg-3">
-                    <div class="box">
-                        <div class="box-inner">
-                            <p>I'm a Cool Box!</p>
-                            <a href="#">
-                                <div class="button">Button</div>
-                            </a>
+                <div class="column lg-3 md-6 sm-6">
+                    <a href="#">
+                        <div class="catbox">
+                            <div class="catboxinner">
+                                <img src="images\cat_07.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="column sm-12">
-                    <div class="box">
-                        <div class="box-inner">
-                            <p>I'm a Cool Box!</p>
-                            <a href="#">
-                                <div class="button">Button</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="box">
-                        <div class="box-inner">
-                            <p>I'm a Cool Box!</p>
-                            <a href="#">
-                                <div class="button">Button</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="box">
-                        <div class="box-inner">
-                            <p>I'm a Cool Box!</p>
-                            <a href="#">
-                                <div class="button">Button</div>
-                            </a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

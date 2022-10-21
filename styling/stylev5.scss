@@ -1,0 +1,119 @@
+// pulls through various elements of the template
+@import 'columngrid.scss';
+@import 'utilityclasses.scss';
+@import 'basetheme.scss';
+@import 'gallery.scss';
+
+// this is where the custom styling for this design should be!!
+
+#topbar {
+    @include color-scheme($scheme-secondary...);
+    @include font($fontbody...);
+    @include padding($paddingsml...);
+    color: #fff;
+}
+
+#header {
+    @include color-scheme($scheme-default...);
+    @include font($fontbody...);
+    @include padding($paddingmd...);
+    color: #fff;
+
+    .navbar {
+        @include navbar;
+
+        *:hover {
+            color: $clr-accent;
+        }
+    }
+
+    img {
+        max-width: 150px;
+    }
+}
+
+#productsection {
+    @include color-scheme($scheme-offwhite...);
+    @include padding($paddingxl...);
+    margin-bottom: $marginy * 2;
+    
+    .productdescription {
+        @include font($fontbody...);
+        @include padding($paddingxxl...);
+        
+        h3 {
+            @include font($fontheading...);
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .usplist {
+            margin-top: 10px;
+            padding-left: $paddingx;
+            @include font($fontcta...);
+            color: #333;
+            line-height: 1.7;
+        }
+    }
+}
+
+#description {
+
+    @include margin($marginlg...);
+
+    .sectionheader {
+        @include color-scheme($scheme-default...);
+        @include font($fontcta...);
+        @include padding($padding...);
+        border-bottom: 5px solid $clr-accent;
+    }
+    .text-body {
+        @include font($fontbody...);
+        @include padding($paddingxl...);
+        border: 1px solid #eee;
+    }
+}
+
+#mobilemenu {    
+    position: sticky;
+    top: 0;
+    height: 0px;
+    width: 400px;
+    max-width: 90%;
+    transition: all 0.8s;
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    
+    .mobilemenu_inner {
+        position: absolute;
+        height: 100vh;
+        background-color: #000;
+        color: #fff;
+        
+        .mobilemenu_content {
+            padding: 5%;
+        }
+    }
+}
+
+.buttonwrap label .button {
+    @include color-scheme($scheme-accent...);
+    transition: all 0.4s;
+
+    &:hover {
+        @include color-scheme($scheme-secondary...);
+        transition: all 0.2s;;
+    }
+}
+
+#menutoggle:checked ~ #mobilemenu {    
+    transform: translateX(0%);
+    transition: all 0.3s;
+    display: block;
+    transition: all 0.3s;
+    
+    .mobilemenu_inner {
+        width: 100%;
+    }
+}

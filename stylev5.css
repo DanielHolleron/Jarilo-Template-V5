@@ -1,39 +1,3 @@
-#mobilemenu {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: 0px;
-  width: 400px;
-  max-width: 90%;
-  transition: all 0.8s;
-  z-index: 99;
-  transform: translateX(-100%);
-  transition: all 0.5s;
-}
-#mobilemenu .mobilemenu_inner {
-  position: absolute;
-  height: 100vh;
-  background-color: #000;
-  color: #fff;
-}
-#mobilemenu .mobilemenu_inner .mobilemenu_content {
-  padding: 5%;
-}
-
-#menutoggle:checked ~ #mobilemenu {
-  transform: translateX(0%);
-  transition: all 0.3s;
-  display: block;
-  transition: all 0.3s;
-}
-#menutoggle:checked ~ #mobilemenu .mobilemenu_inner {
-  width: 100%;
-}
-
-#header #menutoggle:checked + label .button {
-  background: red;
-}
-
 /* == COLUMN CSS == */
 .column.is-1 {
   flex: 0 0 8.3333333333%;
@@ -339,4 +303,40 @@
 
 .column > div {
   margin: 7px;
+}
+
+#mobilemenu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 0px;
+  width: 400px;
+  max-width: 90%;
+  transition: all 0.8s;
+  z-index: 99;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+#mobilemenu .mobilemenu_inner {
+  position: absolute;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+#mobilemenu .mobilemenu_inner .mobilemenu_content {
+  padding: 5%;
+}
+
+#menutoggle:checked ~ #mobilemenu {
+  transform: translateX(0%);
+  transition: all 0.3s;
+  display: block;
+  transition: all 0.3s;
+}
+#menutoggle:checked ~ #mobilemenu .mobilemenu_inner {
+  width: 100%;
+}
+
+#header #menutoggle:checked + label .button {
+  background: red;
 }/*# sourceMappingURL=stylev5.css.map */

@@ -1,0 +1,30 @@
+// UTILITY / REUSABLE CLASSES */
+// The below are reusable sets of styling for general site elements, such as navbars and section headings
+
+@mixin navbar() {
+    ul {
+        list-style: none;
+        padding: 0px;
+
+        li {
+            @include font($fontcta...);
+            @include padding($paddingsml...);
+            display: inline;
+            color: #fff;
+        }
+    }
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+input {
+	display: none;
+}
+
+.button {
+	background: #fff;
+	padding: 20px;
+}

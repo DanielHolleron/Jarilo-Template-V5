@@ -1,0 +1,57 @@
+/* Gallery CSS */
+.gallery {
+	position: relative;
+	padding-top: 475px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+
+    .gallery__item {
+        background: #fff;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10%;
+        min-height: 100px;
+        
+        .bigimg {
+            opacity: 0;
+            display: none;
+            transition: all 0.4s;
+            background: #fff;
+            
+            img {
+                max-height: 100%;
+                max-width: 90%;
+                width: auto;
+                margin: auto;
+                display: block;
+            }
+        }
+    }
+    
+    input:checked + .bigimg {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 430px;
+        width: calc(100% - 30px);
+        padding: 15px;
+        border: 1px solid #eee;
+        transition: all 0.2s;        
+    }
+
+    label img {
+        display: block !important;
+    }
+
+    @media (max-width: 770px) {
+        padding-top: 350px;
+
+        input:checked + .bigimg {
+            height: 300px;
+        }
+    }
+}

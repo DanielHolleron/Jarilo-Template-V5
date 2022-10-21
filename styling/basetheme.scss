@@ -1,0 +1,94 @@
+// COLOUR SCHEME */
+
+// establish the colours to be used in colour schemes
+$clr-primary: #333;
+$clr-secondary: #222;
+$clr-accent: #00badb;
+$clr-offwhite: #f8f8f8;
+
+// create the colour schemes, the second argument is for the font colour
+$scheme-default: $clr-primary, #fff;
+$scheme-secondary: $clr-secondary, #fff;
+$scheme-accent: $clr-accent, #fff;
+$scheme-offwhite: $clr-offwhite, #333;
+
+// this is what we call in the main scss sheet, call it in with @include!
+@mixin color-scheme($bg, $font) {
+    background: $bg;
+    color: $font;
+    padding: 15px;
+}
+
+// FONT STACK */
+
+// choose what fonts to include and what the default styling is
+$f-primary: oswald;
+$f-body: oswald;
+$dark: #111;
+$light: #eaeaea;
+$accent: $clr-primary;
+$font-size: inherit;
+$font-weight: inherit;
+$line-height: inherit;
+$letter-spacing: inherit;
+$text-transform: inherit;
+
+// some basic font schemes, order is;
+///////////// family / color  / size / line / letter / weight / transform
+$fontheading: $f-primary, $light, 3.5rem, 1, 1px, 800, uppercase;
+$fontcta: $f-primary, $light, 1rem, 1, 1px, 400, uppercase;
+$fontbody: $f-body, $dark, .9rem, 2, .5px, 300, inherit;
+
+body {
+    font-family: $f-body;
+}
+
+@mixin font($font, $color, $font-size, $line-height, $letter-spacing, $font-weight, $text-transform) {
+    font-family: $font;
+    font-size: $font-size;
+    color: $color;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    font-weight: $font-weight;
+    text-transform: $text-transform;
+}
+
+// == SPACING SETTINGS == */
+
+// Set up spacing parameters
+$marginx: 1rem;
+$marginy: 1rem;
+$paddingx: 1rem;
+$paddingy: 1rem;
+
+// Standard Margin Spacing Settings
+$margin: $marginy $marginx;
+$marginsml: $marginy * .5 $marginx * .5;
+$marginmd: $marginy * 1.25 $marginx * 1.25;
+$marginlg: $marginy * 1.5 $marginx * 1.5;
+$marginxl: $marginy * 2 $marginx * 2;
+$marginxxl: $marginy * 3 $marginx * 3;
+
+@mixin margin($marginy, $marginx) {
+    margin: $marginy $marginx;
+}
+
+@mixin padding($paddingy, $paddingx) {
+    margin: $paddingy $paddingx;
+}
+
+// Standard Padding Spacing Settings
+$padding: $paddingy $paddingx;
+$paddingsml: $paddingy * .5 $paddingx * .5;
+$paddingmd: $paddingy * 1.25 $paddingx * 1.25;
+$paddinglg: $paddingy * 1.5 $paddingx * 1.5;
+$paddingxl: $paddingy * 2 $paddingx * 2;
+$paddingxxl: $paddingy * 3 $paddingx * 3;
+
+@mixin padding($paddingy, $paddingx) {
+    padding: $paddingy $paddingx;
+}
+
+@mixin padding($paddingy, $paddingx) {
+    padding: $paddingy $paddingx;
+}
